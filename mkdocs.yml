@@ -1,0 +1,23 @@
+site_name: Middle East Finance & Tax Today
+site_url: https://mefinancetaxtoday.readthedocs.io/
+site_description: "Your premier source for financial insights, tax updates, and regulatory news across the Middle East."
+site_author: "Middle East Finance & Tax Today"
+
+theme:
+  name: material
+  palette:
+    scheme: default
+    primary: indigo
+    accent: blue
+  features:
+    - navigation.instant
+
+nav:
+  - Home: index.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
