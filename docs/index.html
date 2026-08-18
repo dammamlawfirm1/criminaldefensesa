@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشؤون الجنائية والوقاية | الحماية القانونية والامتثال المؤسسي</title>
+    
+    <!-- Google Fonts: Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0d3b36;
+            --primary-dark: #06201e;
+            --accent: #f59e0b;
+            --accent-hover: #d97706;
+            --bg-warm: #fbf9f5;
+            --bg-cream: #f0ece1;
+            --text-dark: #06201e;
+            --text-muted: #526e6b;
+            --white: #ffffff;
+            --card-shadow: 0 10px 30px rgba(13, 59, 54, 0.06);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 6rem 0;
+        }
+
+        /* Section Header */
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            background-color: rgba(245, 158, 11, 0.15);
+            color: var(--accent);
+            padding: 0.4rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 0.9rem 2rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* 1. Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            z-index: 1000;
+            background-color: rgba(13, 59, 54, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 85px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 900;
+        }
+
+        .logo i {
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-toggle {
+            display: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* 2. Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: var(--white);
+            padding: 180px 0 120px 0;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            opacity: 0.08;
+            z-index: 0;
+        }
+
+        .hero-grid {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transform: scale(1.02);
+            transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.08);
+        }
+
+        /* 3. Quick Stats */
+        .stats-section {
+            background-color: var(--bg-cream);
+            padding: 4rem 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .stat-card {
+            background-color: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: var(--card-shadow);
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .stat-card h3 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-card p {
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* 4. Platform Overview */
+        .overview {
+            background-color: var(--bg-warm);
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .overview-img-wrapper {
+            position: relative;
+        }
+
+        .overview-img-wrapper img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .overview-text h2 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .overview-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .overview-list {
+            margin-top: 2rem;
+        }
+
+        .overview-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .overview-list i {
+            color: var(--accent);
+            background-color: rgba(245, 158, 11, 0.1);
+            padding: 0.5rem;
+            border-radius: 50%;
+        }
+
+        /* 5. Main Featured Article Section */
+        .article-section {
+            background-color: var(--white);
+            padding: 7rem 0;
+        }
+
+        .article-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--bg-cream);
+            border-bottom: 1px solid var(--bg-cream);
+            padding: 1rem 0;
+        }
+
+        .article-meta span i {
+            color: var(--accent);
+            margin-left: 0.5rem;
+        }
+
+        .article-body h2 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 2.5rem 0 1rem 0;
+            border-right: 4px solid var(--accent);
+            padding-right: 1rem;
+        }
+
+        .article-body p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .article-body ul {
+            margin: 1.5rem 0;
+            padding-right: 2rem;
+            list-style: disc;
+        }
+
+        .article-body li {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+
+        .article-body a {
+            color: var(--primary);
+            font-weight: 700;
+            border-bottom: 2px solid var(--accent);
+            transition: var(--transition);
+        }
+
+        .article-body a:hover {
+            color: var(--accent);
+        }
+
+        .highlight-box {
+            background-color: var(--bg-warm);
+            border-right: 5px solid var(--accent);
+            padding: 2rem;
+            border-radius: 0 12px 12px 0;
+            margin: 2.5rem 0;
+        }
+
+        .highlight-box p {
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin-bottom: 0;
+        }
+
+        /* 6. Core Features */
+        .features {
+            background-color: var(--bg-warm);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background-color: var(--white);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(13, 59, 54, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(13, 59, 54, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(13, 59, 54, 0.06);
+            color: var(--primary);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover .feature-icon {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* 7. Step-by-Step Architecture Guide */
+        .architecture {
+            background-color: var(--white);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .step-card {
+            background-color: var(--bg-warm);
+            padding: 2.5rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            position: relative;
+            border-top: 4px solid var(--primary);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 900;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .step-card h3 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin: 1rem 0 0.75rem 0;
+        }
+
+        .step-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 8. Comprehensive Comparison Table */
+        .comparison {
+            background-color: var(--bg-cream);
+        }
+
+        .table-wrapper {
+            background-color: var(--white);
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }
+
+        th, td {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--bg-cream);
+        }
+
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(251, 249, 245, 0.5);
+        }
+
+        td:first-child {
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .fa-check {
+            color: #10b981;
+            font-size: 1.2rem;
+        }
+
+        .fa-times {
+            color: #ef4444;
+            font-size: 1.2rem;
+        }
+
+        /* 9. Interactive FAQ Section */
+        .faq {
+            background-color: var(--white);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--bg-warm);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(13, 59, 54, 0.08);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+        }
+
+        .faq-question i {
+            color: var(--accent);
+            transition: var(--transition);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 1.5rem 2rem;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* 10. Expert Tips & Best Practices */
+        .tips {
+            background-color: var(--bg-warm);
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .tip-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            border-right: 4px solid var(--accent);
+        }
+
+        .tip-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .tip-card h3 {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .tip-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* 11. User Feedback & Testimonials */
+        .testimonials {
+            background-color: var(--white);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--bg-warm);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-content {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent);
+        }
+
+        .author-info h4 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        /* 12. Highlighted Resource Banner */
+        .cta-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: var(--white);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-banner h2 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .cta-banner p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        /* 13. Functional Contact Form Section */
+        .contact {
+            background-color: var(--bg-cream);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-detail {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .contact-detail i {
+            width: 45px;
+            height: 45px;
+            background-color: var(--white);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid var(--bg-cream);
+            border-radius: 8px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            color: var(--text-dark);
+            background-color: var(--bg-warm);
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--accent);
+            background-color: var(--white);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* 14. Comprehensive Footer */
+        .footer {
+            background-color: var(--primary-dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 5rem 0 2rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-about p {
+            margin-top: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent);
+            padding-right: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--accent);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-grid, .overview-grid, .contact-grid, .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .stats-grid, .features-grid, .steps-grid, .tips-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-toggle {
+                display: block;
+            }
+            .stats-grid, .features-grid, .steps-grid, .tips-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.3rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Modern Sticky Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>الشؤون الجنائية والوقاية</span>
+            </a>
+            <div class="nav-links">
+                <a href="#overview">عن المنصة</a>
+                <a href="#article">الدراسة النظامية</a>
+                <a href="#features">المميزات</a>
+                <a href="#architecture">دليل العمل</a>
+                <a href="#faq">الأسئلة الشائعة</a>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">استشارة فورية</a>
+            </div>
+            <div class="mobile-toggle" id="mobileToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 2. Dynamic Hero Section -->
+    <header class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <h1>الحماية النظامية المتقدمة لـ <span>جرائم الأموال والجرائم الشركات</span></h1>
+                <p>منصة قانونية رائدة متخصصة في الحوكمة الجنائية، الوقاية من التستر التجاري، وإدارة المخاطر الاقتصادية وفق أحدث الأنظمة والتشريعات.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">احصل على استشارة قانونية <i class="fa-solid fa-arrow-left"></i></a>
+                    <a href="#article" class="btn btn-outline">قراءة المقال التخصصي</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80" alt="الاستشارات الجنائية والشركات">
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. Quick Stats & Achievements Grid -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>+1500</h3>
+                    <p>استشارة قانونية ناجحة</p>
+                </div>
+                <div class="stat-card">
+                    <h3>99%</h3>
+                    <p>دقة الامتثال المؤسسي</p>
+                </div>
+                <div class="stat-card">
+                    <h3>+200</h3>
+                    <p>شركة محمية نظامياً</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24/7</h3>
+                    <p>دعم واستجابة طارئة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Platform Overview / Editorial Mission Section -->
+    <section class="overview" id="overview">
+        <div class="container overview-grid">
+            <div class="overview-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="رؤية المنصة">
+            </div>
+            <div class="overview-text">
+                <span class="section-tag">عن المنصة ورؤيتنا</span>
+                <h2>ترسيخ دعائم الحماية الجنائية والوقاية المؤسسية للمنشآت</h2>
+                <p>تهدف منصة "الشؤون الجنائية والوقاية" إلى تقديم محتوى تحليلي واستشارات متخصصة تسهم في حماية الكيانات التجارية من المخاطر الجنائية المعقدة، ورفع مستوى الوعي النظامي لدى القيادات الإدارية.</p>
+                <ul class="overview-list">
+                    <li><i class="fa-solid fa-check"></i> تحليل عميق للجرائم الاقتصادية وجرائم أصحاب الياقات البيضاء</li>
+                    <li><i class="fa-solid fa-check"></i> صياغة آليات التدقيق الوقائي وإسناد الصلاحيات</li>
+                    <li><i class="fa-solid fa-check"></i> توفير استشارات متخصصة في <a href="https://dammamlawfirm.com/services/criminal-penal/white-collar-corporate-crime/" target="_blank" style="color:var(--primary); font-weight:700; border-bottom:1px solid var(--accent);">جرائم الأموال والجرائم الشركات</a> لحماية الأصول</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Main Featured Article Section -->
+    <section class="article-section" id="article">
+        <div class="container article-container">
+            <div class="article-header">
+                <span class="section-tag">الدراسة النظامية الرئيسية</span>
+                <h1>الوقاية النظامية من جرائم الاختلاس والتستر التجاري</h1>
+                <div class="article-meta">
+                    <span><i class="fa-regular fa-calendar"></i> أغسطس 2026</span>
+                    <span><i class="fa-regular fa-clock"></i> 8 دقائق قراءة</span>
+                    <span><i class="fa-solid fa-pen-nib"></i> قسم الدراسات الجنائية</span>
+                </div>
+            </div>
+
+            <div class="article-body">
+                <p>يستعرض المقال مفهوم الجرائم الاقتصادية وجرائم أصحاب الياقات البيضاء بالمنشآت والتي تمثل تحدياً كبيراً لاستقرار الشركات والكيانات التجارية الحديثة. تتطلب البيئة الاستثمارية المعاصرة فهماً عميقاً للمخاطر المحتملة التي قد تهدد الكيان التجاري من الداخل والخارج على حد سواء، مما يستوجب تفعيل منظومة رقابة متكاملة.</p>
+
+                <h2>المسؤولية الجزائية والتبعات المالية للإداريين</h2>
+                <p>يتناول المقال المسؤولية الجزائية لمدراء الشركات والتبعات المالية والإدارية للتستر التجاري وجرائم الأموال. إن إساءة استخدام الصلاحيات الإدارية أو التستر على ممارسات مالية غير مشروعة يعرض المسؤولين لمساءلة قانونية صارمة وعقوبات جسيمة وفق <a href="https://ar.wikipedia.org/wiki/نظام_الشركات" target="_blank">نظام الشركات السعودي</a> والتشريعات ذات الصلة. كما تشمل التبعات غرامات مالية ضخمة وإيقاف الأنشطة التجارية وتشويه السمعة المؤسسية.</p>
+
+                <div class="highlight-box">
+                    <p>تحذير نظامي: التستر التجاري وجرائم الاختلاس لا تقتصر عقوباتها على الجانب المالي فحسب، بل تمتد لتشمل العقوبات السالبة للحرية والتشهير بالمنشأة المخالفة.</p>
+                </div>
+
+                <h2>طرق التدقيق الوقائي وإسناد الصلاحيات</h2>
+                <p>يقدم المقال طرق التدقيق الوقائي وإسناد الصلاحيات للحد من الاحتيال الداخلي. من الضروري اعتماد مبدأ الفصل بين الواجبات، ومراجعة الحسابات بشكل دوري، وتفعيل قنوات الإبلاغ الآمن عن المخالفات (Whistleblowing) داخل المؤسسة لضمان الكشف المبكر عن أي ثغرات مالية.</p>
+
+                <h2>الاستشارات القانونية وحماية الأصول</h2>
+                <p>يوفر المكتب استشارات متخصصة في <a href="https://dammamlawfirm.com/services/criminal-penal/white-collar-corporate-crime/" target="_blank">جرائم الأموال والجرائم الشركات</a> لحماية المنشأة من المخاطر الجنائية المستحدثة. إن الاستعانة بخبرات قانونية محترفة يساعد المؤسسات في بناء عقود محصنة وإجراء تحقيقات داخلية دقيقة تحافظ على المصالح العليا للشركة.</p>
+
+                <div class="highlight-box">
+                    <p>للمزيد من المراجع النظامية الدولية المتعلقة بمكافحة الجرائم الاقتصادية، يمكنكم الاطلاع على إرشادات <a href="https://www.unodc.org/" target="_blank">مكتب الأمم المتحدة المعني بالمخدرات والجريمة</a>.</p>
+                </div>
+
+                <h2>خاتمة وتوصيات حوكمية</h2>
+                <p>يوصي المقال بالالتزام بالحوكمة والرقابة المالية لحماية السمعة والأموال. إن الاستثمار في الأنظمة الوقائية والتدريب المستمر للعاملين هو الدرع الأقوى ضد المخاطر الجنائية والاقتصادية في بيئة الأعمال المعاصرة.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Core Features & Key Value Grid -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">مميزات المنصة</span>
+                <h2>ركائز الحماية المؤسسية المتكاملة</h2>
+                <p class="section-desc">نقدم حلولاً متطورة ومدعومة بالخبرة النظامية الشاملة لضمان أمان عملك التجاري.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>الحماية الجنائية الاستباقية</h3>
+                    <p>تحليل الثغرات النظامية وتوقع المخاطر المحتملة قبل وقوعها لحماية الكيان التجاري.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>مكافحة جرائم الأموال</h3>
+                    <p>استراتيجيات متقدمة للتدقيق المالي واكتشاف عمليات الاحتيال والاختلاس الداخلي.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-handshake-angle"></i>
+                    </div>
+                    <h3>معالجة التستر التجاري</h3>
+                    <p>إيجاد حلول نظامية لتصحيح أوضاع المنشآت والامتثال الكامل لمتطلبات وزارة التجارة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>حوكمة الشركات واللوائح</h3>
+                    <p>صياغة اللوائح الداخلية وتوزيع الصلاحيات الإدارية بدقة لمنع تضارب المصالح.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-user-secret"></i>
+                    </div>
+                    <h3>التحقيقات الداخلية</h3>
+                    <p>إدارة التحقيقات المهنية في المخالفات المالية ب سرية تامة وأدلة قانونية صلبة.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3>استشارات طارئة 24/7</h3>
+                    <p>فريق من الخبراء القانونيين جاهز للتدخل الفوري وتقديم الدعم في القضايا الحرجة.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Visual Breakdown / Step-by-Step Architecture Guide -->
+    <section class="architecture" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">دليل خطوة بخطوة</span>
+                <h2>منهجية العمل والتدقيق الوقائي</h2>
+                <p class="section-desc">خطوات مدروسة لتأمين منشأتك تجارياً وجنائياً وفق أعلى المعايير المهنية.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>الفحص والتقييم الشامل</h3>
+                    <p>فحص العقود، الهيكل الإداري، والعمليات المالية لتحديد نقاط الضعف والمخاطر الكامنة.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>تصميم الهيكلة النظامية</h3>
+                    <p>إعادة صياغة لوائح الصلاحيات وتوزيع المسؤوليات لضمان الفصل الرقابي السليم.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>تفعيل آليات التدقيق</h3>
+                    <p>تنفيذ برامج التدقيق الداخلي المستمر وأنظمة الرصد المبكر للاختلاسات والاحتيال.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>المتابعة والتمثيل القانوني</h3>
+                    <p>تقديم الدعم القانوني المستمر، وتحديث الأنظمة تماشياً مع المستجدات التشريعية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Comprehensive Comparison Table / Value Matrix -->
+    <section class="comparison">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">جدول المقارنة الشامل</span>
+                <h2>لماذا تختار خدماتنا الاحترافية؟</h2>
+                <p class="section-desc">مقارنة بين الإدارة التقليدية للمخاطر ونهج منصة الشؤون الجنائية والوقاية.</p>
+            </div>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>وجه المقارنة</th>
+                            <th class="text-center">منصة الشؤون الجنائية والوقاية</th>
+                            <th class="text-center">الإدارة التقليدية للمخاطر</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>الاستجابة للمخاطر الجنائية</td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i> استباقية وتوقعية</td>
+                            <td class="text-center"><i class="fa-solid fa-times"></i> رد فعل متأخر</td>
+                        </tr>
+                        <tr>
+                            <td>الوقاية من جرائم أصحاب الياقات البيضاء</td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i> أنظمة تدقيق متقدمة</td>
+                            <td class="text-center"><i class="fa-solid fa-times"></i> غياب الرقابة المتخصصة</td>
+                        </tr>
+                        <tr>
+                            <td>فريق الخبراء والمستشارين</td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i> نخبة من المحامين والخبراء</td>
+                            <td class="text-center"><i class="fa-solid fa-times"></i> استشارات عامة محدودة</td>
+                        </tr>
+                        <tr>
+                            <td>الامتثال لنظام الشركات والتستر</td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i> توافق تام ودائم</td>
+                            <td class="text-center"><i class="fa-solid fa-times"></i> ثغرات نظامية متكررة</td>
+                        </tr>
+                        <tr>
+                            <td>الدعم والاستجابة السريعة</td>
+                            <td class="text-center"><i class="fa-solid fa-check"></i> متاح على مدار الساعة</td>
+                            <td class="text-center"><i class="fa-solid fa-times"></i> أوقات عمل رسمية فقط</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Interactive FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">الأسئلة الشائعة</span>
+                <h2>كل ما تحتاج معرفته حول الحماية النظامية</h2>
+                <p class="section-desc">إجابات شافية لأبرز الاستفسارات القانونية والوقائية للشركات.</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما هي أبرز مؤشرات وجود شبهات اختلاس أو احتيال داخل الشركة؟</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>تتضمن المؤشرات تناقضات غير مبررة في السجلات المالية، نمط حياة مفاجئ وغير متناسب لبعض الموظفين المسؤولين عن الحسابات، رفض بعض الموظفين أخذ إجازات سنوية تضمن مراجعة أعمالهم، وغياب المستندات المؤيدة لبعض الصرفيات.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف تحمي المنشأة نفسها من عقوبات التستر التجاري؟</span>
+                        <div class="faq-answer">
+                            <p>تتم الحماية عبر فصل الملكية عن الإدارة بشكل نظامي، توثيق كافة التعاملات البنكية للمؤسسة عبر حساباتها الرسمية حصراً، التأكد من عدم تمكين غير المعتمدين من إدارة الأنشطة، والالتزام ببرامج التصحيح التي تقرها الجهات المختصة.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>ما أهمية التدقيق الوقائي المستمر للشركات الناشئة والمتوسطة؟</span>
+                        <div class="faq-answer">
+                            <p>يساعد التدقيق الوقائي في اكتشاف الثغرات الإدارية والمالية قبل تفاقمها وتحولها إلى قضايا جنائية، مما يوفر على المنشأة تكاليف باهظة ويحمي سمعتها التجارية واستمرارية أعمالها في السوق.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>كيف يمكنني طلب استشارة متخصصة في جرائم الأموال والشركات؟</span>
+                        <div class="faq-answer">
+                            <p>يمكنك التواصل معنا مباشرة عبر نموذج الاتصال أسفل الصفحة أو النقر على زر الاستشارة الفورية لتحديد موعد عاجل مع فريق الخبراء القانونيين لدينا لدراسة حالتك بسرية تامة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Expert Tips & Best Practices Cards -->
+    <section class="tips">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">نصائح وإرشادات</span>
+                <h2>إرشادات ذهبية لحماية شركتك من المخاطر الجنائية</h2>
+                <p class="section-desc">خطوات عملية موصى بها من قبل خبراء الحوكمة والامتثال.</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fa-solid fa-file-shield"></i>
+                    <h3>توثيق الصلاحيات بدقة</h3>
+                    <p>لا تمنح صلاحيات مطلقة لأي شخص؛ واحرص على توزيع الاعتمادات المالية وتحديد سقف واضح لكل مستوى إداري.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                    <h3>المراجعة المحاسبية المفاجئة</h3>
+                    <p>قم بإجراء عمليات تدقيق مالي دورية وغير موعدة للتأكد من مطابقة الأرصدة والقيود المحاسبية بدقة.</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>توعية فريق العمل</h3>
+                    <p>انشر ثقافة النزاهة والوعي النظامي بين موظفيك وعرفهم بمدى خطورة المخالفات المالية والتستر التجاري.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. User Feedback & Testimonials Showcase -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">آراء العملاء</span>
+                <h2>ماذا يقول عملاؤنا عن خدماتنا الوقائية؟</h2>
+                <p class="section-desc">قصص نجاح وشراكات طويلة الأمد في تأمين وحماية الشركات.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">"بفضل الاستشارات الدقيقة والتدقيق الوقائي الذي قدمته لنا المنصة، استطعنا إعادة هيكلة الصلاحيات المالية وتجنب مخاطر جسيمة كادت تؤثر على عملنا."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="العميل">
+                        <div class="author-info">
+                            <h4>مهند القحطاني</h4>
+                            <p>مدير تنفيذي لشركة تجارية</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">"احترافية عالية وسرية تامة في التعامل مع القضايا واللوائح الداخلية. أنصح كل مالك شركة بالاستعانة بخبراتهم في مجال جرائم الشركات."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&q=80" alt="العميل">
+                        <div class="author-info">
+                            <h4>خالد العتيبي</h4>
+                            <p>رئيس مجلس إدارة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div>
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-content">"الاستشارات في ملف التستر التجاري كانت واضحة وعملية، وساعدتنا في تصحيح أوضاعنا القانونية بكل سلاسة ويسر. شكراً لفريق العمل."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80" alt="العميل">
+                        <div class="author-info">
+                            <h4>سلطان الشمري</h4>
+                            <p>رائد أعمال ومستثمر</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Highlighted Resource Banner / Quick Action Callout -->
+    <section class="cta-banner">
+        <div class="container">
+            <h2>هل تحتاج إلى حماية قانونية فورية لشركتك؟</h2>
+            <p>لا تدع الثغرات النظامية تهدد استثماراتك. تواصل مع خبرائنا اليوم واحصل على تقييم شامل ومخصص لبيئة عملك.</p>
+            <a href="#contact" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">احجز استشارتك الآن <i class="fa-solid fa-arrow-left"></i></a>
+        </div>
+    </section>
+
+    <!-- 13. Functional Contact / Consultation Form Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-info">
+                <span class="section-tag">تواصل معنا</span>
+                <h3>نحن هنا لحمايتك ودعم نجاحك المؤسسي</h3>
+                <p>تفضل بتعبئة النموذج وسيقوم فريق الاستشارات القانونية بالتواصل معك في أسرع وقت ممكن لدراسة حالتك وتقديم الحلول النظامية المناسبة.</p>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>تواصل مباشر: 966500000000+</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>البريد الإلكتروني: info@criminaldefensesa.com</span>
+                </div>
+                <div class="contact-detail">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>المملكة العربية السعودية - الرياض</span>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="consultationForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="الاسم الكامل" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="رقم الجوال" required>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" required>
+                            <option value="" disabled selected>اختر نوع الاستشارة المطلوبة</option>
+                            <option value="corporate">جرائم الأموال والشركات</option>
+                            <option value="concealment">التستر التجاري والامتثال</option>
+                            <option value="audit">التدقيق الوقائي والحوكمة</option>
+                            <option value="other">استشارة عامة</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" placeholder="تفاصيل الاستشارة أو الطلب..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">إرسال طلب الاستشارة</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Comprehensive Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo" style="color: var(--white);">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                        <span>الشؤون الجنائية والوقاية</span>
+                    </a>
+                    <p>منصة متخصصة في تقديم المحتوى القانوني الاستراتيجي، وحماية الكيانات التجارية من المخاطر الجنائية والاقتصادية وفق أعلى معايير الحوكمة والاحترافية.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#overview">عن المنصة</a></li>
+                        <li><a href="#article">الدراسة النظامية</a></li>
+                        <li><a href="#features">المميزات</a></li>
+                        <li><a href="#architecture">دليل العمل</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="https://dammamlawfirm.com/services/criminal-penal/white-collar-corporate-crime/" target="_blank">جرائم الأموال والشركات</a></li>
+                        <li><a href="#contact">معالجة التستر التجاري</a></li>
+                        <li><a href="#contact">التدقيق الوقائي</a></li>
+                        <li><a href="#contact">حوكمة الشركات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>السياسات القانونية</h4>
+                    <ul>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">شروط الاستخدام</a></li>
+                        <li><a href="#">إخلاء المسؤولية</a></li>
+                        <li><a href="#contact">اتصل بنا</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 الشؤون الجنائية والوقاية (criminaldefensesa). جميع حقوق الطبع والنشر محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JS for Interactive Elements -->
+    <script>
+        // FAQ Accordion Toggle
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const currentActive = document.querySelector('.faq-item.active');
+                if (currentActive && currentActive !== item) {
+                    currentActive.classList.remove('active');
+                }
+                item.classList.toggle('active');
+            });
+        });
+
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.querySelector('.nav-links');
+        mobileToggle.addEventListener('click', () => {
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '85px';
+                navLinks.style.right = '0';
+                navLinks.style.left = '0';
+                navLinks.style.backgroundColor = 'var(--primary-dark)';
+                navLinks.style.padding = '2rem';
+                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.2)';
+            }
+        });
+
+        // Form Submission Handler
+        const consultationForm = document.getElementById('consultationForm');
+        consultationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('شكراً لك! تم استلام طلب استشارتك بنجاح وسنتواصل معك في أقرب وقت ممكن.');
+            consultationForm.reset();
+        });
+    </script>
+</body>
+</html>
